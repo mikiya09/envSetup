@@ -12,6 +12,8 @@
 
 
 -- =====================================
+-- go to where colorscheme is download, and modify their script, specifically treesitter
+-- you will be able to modify the color shown in neovim colorscheme
 -- Dracula:
 local colorscheme = "dracula"
 
