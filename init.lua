@@ -34,10 +34,12 @@ vim.cmd [[
 
 -- vim.cmd[[colorscheme dracula]]
 -- references: https://github.com/LunarVim/Neovim-from-scratch
+-- customize dracula color palette
 
 
 ----** neovim shortcut **----
 -- shift + s: delete the whole line, and enter insert mode 
+
 
 
 
