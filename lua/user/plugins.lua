@@ -52,7 +52,11 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim'            -- packer manage itself: https://github.com/wbthomason/packer.nvim
   use 'nvim-lua/popup.nvim'               -- An implementation of the Popup API from vim in Neovim
   use 'nvim-lua/plenary.nvim'             -- Useful lua functions used ny lots of plugins
-  use 'Mofiqul/dracula.nvim'              -- colorscheme
+
+  -- colorscheme
+  use 'Mofiqul/dracula.nvim'
+  use "lunarvim/darkplus.nvim"
+
   use 'numToStr/Comment.nvim'             -- easily comment things out
   use {
     "nvim-treesitter/nvim-treesitter",    -- color highlighting enhancement 
@@ -69,7 +73,7 @@ return packer.startup(function(use)
 
   -- optional folder: loaded with command(lazyload), separate in another folder, keep it clean 
   -- format {'user/repo', opt = true, cmd = {'xxx', 'xxx', 'xxx'}}
-  use ""
+  -- use ""
 
 
   -- Automatically set up your configuration after cloning packer.nvim

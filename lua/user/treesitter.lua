@@ -11,7 +11,7 @@ configs.setup {
   ignore_install = { "" },    -- List of parsets to ignore installing
   highlight = {
     enable = true,            -- false will disable the whole extension
-    disable = { "cpp" },         -- list of language that will be disabled: cpp(c++), python, javacript, c, rust,  
+    disable = { "" },         -- list of language that will be disabled: cpp(c++), python, javacript, c, rust,  
     additional_vim_regex_highlighting = true,
 
   },
