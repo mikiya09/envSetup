@@ -1,5 +1,3 @@
-
-
 ---------------- *** neovim in lua *** -----------------
 
 
@@ -39,8 +37,4 @@ vim.cmd [[
 
 ----** neovim shortcut **----
 -- shift + s: delete the whole line, and enter insert mode 
-
-
-
-
 
