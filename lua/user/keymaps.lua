@@ -15,7 +15,7 @@ local keymap = vim.api.nvim_set_keymap
 keymap("", "<Space>","<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-keymap("n", "<leader>f", ":Lex 30<cr>", opts) -- right now it's like nerdtree with <space>+f: files & folders
+keymap("n", "<leader>e", ":Lex 30<cr>", opts) -- right now it's like nerdtree with <space>+f: files & folders
 
 -- written on neovim :w 
 keymap("n", "<C-s>", ":w<CR>", opts)
@@ -34,7 +34,9 @@ keymap("v", ">", ">gv", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprev<CR>", opts)
 
-
+-- telescope mapping --
+keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({  }))<cr>", opts) -- how to enable shortcut preview "previewer = false"
+keymap("n", "<c-g>", "<cmd>Telescope live_grep<cr>", opts)
 
 
 -- ======================================================================================

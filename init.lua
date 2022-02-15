@@ -22,12 +22,17 @@ require "user.treesitter"
 
 require "user.lualine"
 
+require "user.autopairs"
+
 require "user.toggleterm"
+
+require "user.telescope"
 
 --++ transfering config from init.vim ++--
 vim.cmd [[
   syntax enable
   set guicursor=n-c-v:hor20,i:ver10
+  colorscheme dogrun
   ]]
 
 -- vim.cmd[[colorscheme dracula]]

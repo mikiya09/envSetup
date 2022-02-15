@@ -74,11 +74,6 @@ _G.packer_plugins = {
     path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
-  ["darkplus.nvim"] = {
-    loaded = true,
-    path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
-    url = "https://github.com/lunarvim/darkplus.nvim"
-  },
   ["dracula.nvim"] = {
     loaded = true,
     path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/dracula.nvim",
@@ -89,10 +84,15 @@ _G.packer_plugins = {
     path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  ["nord.nvim"] = {
+  ["nightfox.nvim"] = {
     loaded = true,
-    path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/nord.nvim",
-    url = "https://github.com/shaunsingh/nord.nvim"
+    path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -124,10 +124,20 @@ _G.packer_plugins = {
     path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
   ["toggleterm.nvim"] = {
     loaded = true,
     path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["vim-dogrun"] = {
+    loaded = true,
+    path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/vim-dogrun",
+    url = "https://github.com/wadackel/vim-dogrun"
   }
 }
 

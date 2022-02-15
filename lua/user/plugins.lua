@@ -55,8 +55,8 @@ return packer.startup(function(use)
 
   -- colorscheme
   use 'Mofiqul/dracula.nvim'
-  use "lunarvim/darkplus.nvim"
-  use "shaunsingh/nord.nvim"
+  use 'EdenEast/nightfox.nvim'
+  use "wadackel/vim-dogrun"
 
   use 'numToStr/Comment.nvim'             -- easily comment things out
   use {
@@ -69,6 +69,13 @@ return packer.startup(function(use)
   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   use "akinsho/toggleterm.nvim"
+
+  -- autopair: {}, [], "", ''
+  use "windwp/nvim-autopairs"
+
+  -- telescope
+  use "nvim-telescope/telescope.nvim"
+
 
 
 
