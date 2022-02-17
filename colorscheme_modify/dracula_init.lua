@@ -214,7 +214,7 @@ M.apply = function()
 	highlight("TSKeyword", colors.pink, nil, nil, nil)          -- TSKeyword: pink --
 	highlight("TSKeywordFunction", colors.cyan, nil, nil, nil)
 	highlight("TSKeywordOperator", colors.pink, nil, nil, nil)
-	highlight("TSOperator", colors.cyan, nil, nil, nil)          -- operator: cyan --
+	highlight("TSOperator", colors.purple, nil, nil, nil)          -- operator: purple --
 	highlight("TSException", colors.purple, nil, nil, nil)
 	highlight("TSType", colors.yellow, nil, nil, nil)          -- type: yellow --
 	highlight("TSTypeBuiltin", colors.cyan, nil, "italic", nil)
