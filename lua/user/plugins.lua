@@ -55,19 +55,27 @@ return packer.startup(function(use)
 
   -- colorscheme
   use 'Mofiqul/dracula.nvim'
-  use 'EdenEast/nightfox.nvim'
   use "wadackel/vim-dogrun"
 
-  use 'numToStr/Comment.nvim'             -- easily comment things out
+  -- gcc & gc comment
+  use 'numToStr/Comment.nvim'             
+
+  -- treesitter: color highlighting
   use {
-    "nvim-treesitter/nvim-treesitter",    -- color highlighting enhancement 
+    "nvim-treesitter/nvim-treesitter",     
     run = ":TSUpdate",
   }
+
+  -- ?
   use "JoosepAlviste/nvim-ts-context-commentstring"
+
+  -- lualine
   use {
   'nvim-lualine/lualine.nvim',            -- lualine, the line under 
   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+
+  -- float window: toggleterm
   use "akinsho/toggleterm.nvim"
 
   -- autopair: {}, [], "", ''

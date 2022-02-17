@@ -32,7 +32,7 @@ require "user.telescope"
 vim.cmd [[
   syntax enable
   set guicursor=n-c-v:hor20,i:ver10
-  colorscheme dogrun
+  " colorscheme dogrun
   ]]
 
 -- vim.cmd[[colorscheme dracula]]
@@ -43,3 +43,9 @@ vim.cmd [[
 ----** neovim shortcut **----
 -- shift + s: delete the whole line, and enter insert mode 
 
+
+-- command --
+-- replace letter: r + shift + [the character you want to enter]
+-- replace number: r + [the number  you want to enter]
+-- insert at the begining: shift + i
+-- insert at the end: shift + a
