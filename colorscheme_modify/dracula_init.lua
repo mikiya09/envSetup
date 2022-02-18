@@ -15,16 +15,16 @@ local DEFAULT_COLORS = {
   orange = "#d08770",       -- nord
   -- yellow = "#F1FA8C",    -- original(yellow)
   yellow = "#ebcb8b",       -- nord
-  green = "#a3be8c",
+  green = "#50fa7b",
   purple = "#BD93F9",
   -- cyan = "#61afef",      -- original(blue)
   cyan = "#81a1c1",         -- nord
   pink = "#FF79C6",
   bright_red = "#FF6E6E",
-  -- bright_green = "#69FF94",
-  bright_green = "#50fa7b",
+  bright_green = "#a3be8c",
+  -- bright_green = "#50fa7b",
   bright_yellow = "#FFFFA5",
-  bright_blue = "#D6ACFF",
+  bright_blue = "#8be9fd",
   bright_magenta = "#c678dd",
   bright_cyan = "#A4FFFF",
   bright_white = "#FFFFFF",
@@ -194,7 +194,7 @@ M.apply = function()
 
 	highlight("TSConstMacro", colors.cyan, nil, nil, nil)
 	highlight("TSStringRegex", colors.red, nil, nil, nil)
-	highlight("TSString", colors.bright_green, nil, nil, nil)           -- string --
+	highlight("TSString", colors.green, nil, nil, nil)           -- string --
 	highlight("TSStringEscape", colors.cyan, nil, nil, nil)
 	highlight("TSCharacter", colors.green, nil, nil, nil)
 	highlight("TSNumber", colors.purple, nil, nil, nil)           -- number --
@@ -218,7 +218,7 @@ M.apply = function()
 	highlight("TSRepeat", colors.pink, nil, nil, nil)           -- repeat --
 	highlight("TSLabel", colors.cyan, nil, nil, nil)
 
-	highlight("TSKeyword", colors.yellow, nil, nil, nil)          -- return/namespace --
+	highlight("TSKeyword", colors.bright_yellow, nil, nil, nil)          -- return/namespace --
 	highlight("TSKeywordFunction", colors.cyan, nil, nil, nil)
 	highlight("TSKeywordOperator", colors.pink, nil, nil, nil)
 	highlight("TSOperator", colors.purple, nil, nil, nil)           -- operator --
@@ -226,7 +226,7 @@ M.apply = function()
 	highlight("TSType", colors.purple, nil, nil, nil)                 -- type --
 	highlight("TSTypeBuiltin", colors.cyan, nil, "italic", nil)
 	highlight("TSStructure", colors.purple, nil, nil, nil)
-	highlight("TSInclude", colors.yellow, nil, nil, nil)                -- include --
+	highlight("TSInclude", colors.bright_blue, nil, nil, nil)                -- include --
 
 	highlight("TSVariable", colors.fg, nil, nil, nil)
 	highlight("TSVariableBuiltin", colors.purple, nil, nil, nil)
