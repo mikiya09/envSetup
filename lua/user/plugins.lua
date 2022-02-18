@@ -56,7 +56,7 @@ return packer.startup(function(use)
   -- colorscheme
   use 'Mofiqul/dracula.nvim'
   use "wadackel/vim-dogrun"
-
+  use "arcticicestudio/nord-vim"
   -- gcc & gc comment
   use 'numToStr/Comment.nvim'             
 
@@ -83,6 +83,7 @@ return packer.startup(function(use)
 
   -- telescope
   use "nvim-telescope/telescope.nvim"
+
 
 
 

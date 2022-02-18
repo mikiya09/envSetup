@@ -3,24 +3,26 @@
 local M = {}
 
 local DEFAULT_COLORS = {
-  bg = "#282A36",
-  -- bg = "#282c34",
-  -- fg = "#dcdfe4",
-  -- fg = "#F8F8F2",
+  bg = "#282A36",           -- original(bg)
+  -- bg = "#2e3440",        -- nord
+  -- fg = "#eceff4",        -- nord
   fg = "#ffffff",
   selection = "#44475A",
   comment = "#6272A4",
-  red = "#e06c75",
-  -- orange = "#e5c07b",
-  orange = "#ffb86c",
-  yellow = "#F1FA8C",
-  green = "#50fa7b",
-  -- green = "#98c379",
+  -- red = "#e06c75",       -- original(red)
+  red = "#bf616a",           -- nord
+  -- orange = "#ffb86c",    -- original(orange)
+  orange = "#d08770",       -- nord
+  -- yellow = "#F1FA8C",    -- original(yellow)
+  yellow = "#ebcb8b",       -- nord
+  green = "#a3be8c",
   purple = "#BD93F9",
-  cyan = "#61afef",
+  -- cyan = "#61afef",      -- original(blue)
+  cyan = "#81a1c1",         -- nord
   pink = "#FF79C6",
   bright_red = "#FF6E6E",
-  bright_green = "#69FF94",
+  -- bright_green = "#69FF94",
+  bright_green = "#50fa7b",
   bright_yellow = "#FFFFA5",
   bright_blue = "#D6ACFF",
   bright_magenta = "#c678dd",
@@ -195,12 +197,12 @@ M.apply = function()
 	highlight("TSString", colors.bright_green, nil, nil, nil)           -- string --
 	highlight("TSStringEscape", colors.cyan, nil, nil, nil)
 	highlight("TSCharacter", colors.green, nil, nil, nil)
-	highlight("TSNumber", colors.white, nil, nil, nil)           -- number --
+	highlight("TSNumber", colors.purple, nil, nil, nil)           -- number --
 	highlight("TSBoolean", colors.purple, nil, nil, nil)
 	highlight("TSFloat", colors.green, nil, nil, nil)
 	highlight("TSAnnotation", colors.yellow, nil, nil, nil)
 	highlight("TSAttribute", colors.cyan, nil, nil, nil)
-	highlight("TSNamespace", colors.green, nil, nil, nil)       -- namespace --
+	highlight("TSNamespace", colors.bright_green, nil, nil, nil)       -- namespace --
 
 	highlight("TSFuncBuiltin", colors.cyan, nil, nil, nil)
 	highlight("TSFunction", colors.yellow, nil, nil, nil)         -- function --
@@ -212,8 +214,8 @@ M.apply = function()
 	highlight("TSProperty", colors.fg, nil, nil, nil)
 	highlight("TSConstructor", colors.yellow, nil, nil, nil)      -- constructor: self-defined function --
 
-	highlight("TSConditional", colors.pink, nil, nil, nil)        -- condition --
-	highlight("TSRepeat", colors.purple, nil, nil, nil)           -- repeat --
+	highlight("TSConditional", colors.red, nil, nil, nil)        -- condition --
+	highlight("TSRepeat", colors.red, nil, nil, nil)           -- repeat --
 	highlight("TSLabel", colors.cyan, nil, nil, nil)
 
 	highlight("TSKeyword", colors.yellow, nil, nil, nil)          -- return/namespace --

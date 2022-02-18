@@ -32,7 +32,7 @@ require "user.telescope"
 vim.cmd [[
   syntax enable
   set guicursor=n-c-v:hor20,i:ver10
-  " colorscheme dogrun
+  " colorscheme nord
   ]]
 
 -- vim.cmd[[colorscheme dracula]]

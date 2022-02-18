@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["nord-vim"] = {
+    loaded = true,
+    path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/nord-vim",
+    url = "https://github.com/arcticicestudio/nord-vim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
