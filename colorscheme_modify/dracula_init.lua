@@ -202,7 +202,7 @@ M.apply = function()
 	highlight("TSFloat", colors.green, nil, nil, nil)
 	highlight("TSAnnotation", colors.yellow, nil, nil, nil)
 	highlight("TSAttribute", colors.cyan, nil, nil, nil)
-	highlight("TSNamespace", colors.bright_green, nil, nil, nil)       -- namespace --
+	highlight("TSNamespace", colors.purple, nil, nil, nil)       -- namespace --
 
 	highlight("TSFuncBuiltin", colors.cyan, nil, nil, nil)
 	highlight("TSFunction", colors.yellow, nil, nil, nil)         -- function --
@@ -214,8 +214,8 @@ M.apply = function()
 	highlight("TSProperty", colors.fg, nil, nil, nil)
 	highlight("TSConstructor", colors.yellow, nil, nil, nil)      -- constructor: self-defined function --
 
-	highlight("TSConditional", colors.red, nil, nil, nil)        -- condition --
-	highlight("TSRepeat", colors.red, nil, nil, nil)           -- repeat --
+	highlight("TSConditional", colors.pink, nil, nil, nil)        -- condition --
+	highlight("TSRepeat", colors.pink, nil, nil, nil)           -- repeat --
 	highlight("TSLabel", colors.cyan, nil, nil, nil)
 
 	highlight("TSKeyword", colors.yellow, nil, nil, nil)          -- return/namespace --
@@ -226,7 +226,7 @@ M.apply = function()
 	highlight("TSType", colors.purple, nil, nil, nil)                 -- type --
 	highlight("TSTypeBuiltin", colors.cyan, nil, "italic", nil)
 	highlight("TSStructure", colors.purple, nil, nil, nil)
-	highlight("TSInclude", colors.pink, nil, nil, nil)                -- include --
+	highlight("TSInclude", colors.yellow, nil, nil, nil)                -- include --
 
 	highlight("TSVariable", colors.fg, nil, nil, nil)
 	highlight("TSVariableBuiltin", colors.purple, nil, nil, nil)
