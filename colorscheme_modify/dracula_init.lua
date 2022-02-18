@@ -182,12 +182,12 @@ M.apply = function()
 	highlight("TSPunctBracket", colors.fg, nil, nil, nil)
 	highlight("TSPunctSpecial", colors.fg, nil, nil, nil)
 
-	highlight("TSConstant", colors.cyan, nil, nil, nil)             -- constant: cyan --
+	highlight("TSConstant", colors.yellow, nil, nil, nil)             -- constant: yellow --
 	highlight("TSConstantBuiltin", colors.purple, nil, nil, nil)
 
 	highlight("TSConstMacro", colors.cyan, nil, nil, nil)
 	highlight("TSStringRegex", colors.red, nil, nil, nil)
-	highlight("TSString", colors.yellow, nil, nil, nil)             -- string: orange --
+	highlight("TSString", colors.yellow, nil, nil, nil)             -- string: yellow --
 	highlight("TSStringEscape", colors.cyan, nil, nil, nil)
 	highlight("TSCharacter", colors.green, nil, nil, nil)
 	highlight("TSNumber", colors.white, nil, nil, nil)             -- number: white --
@@ -208,7 +208,7 @@ M.apply = function()
 	highlight("TSConstructor", colors.cyan, nil, nil, nil)
 
 	highlight("TSConditional", colors.purple, nil, nil, nil)          -- condition: purple --
-	highlight("TSRepeat", colors.purple, nil, nil, nil)          -- repeat: purple --
+	highlight("TSRepeat", colors.pink, nil, nil, nil)          -- repeat: pink --
 	highlight("TSLabel", colors.cyan, nil, nil, nil)
 
 	highlight("TSKeyword", colors.pink, nil, nil, nil)          -- TSKeyword: pink --
@@ -216,10 +216,10 @@ M.apply = function()
 	highlight("TSKeywordOperator", colors.pink, nil, nil, nil)
 	highlight("TSOperator", colors.purple, nil, nil, nil)          -- operator: purple --
 	highlight("TSException", colors.purple, nil, nil, nil)
-	highlight("TSType", colors.yellow, nil, nil, nil)          -- type: yellow --
+	highlight("TSType", colors.cyan, nil, nil, nil)          -- type: cyan --
 	highlight("TSTypeBuiltin", colors.cyan, nil, "italic", nil)
-	highlight("TSStructure", colors.purple, nil, nil, nil)          -- include: cyan --
-	highlight("TSInclude", colors.cyan, nil, nil, nil)
+	highlight("TSStructure", colors.purple, nil, nil, nil)     
+	highlight("TSInclude", colors.pink, nil, nil, nil)     -- include: pink --
 
 	highlight("TSVariable", colors.fg, nil, nil, nil)          -- variable: fg  --
 	highlight("TSVariableBuiltin", colors.purple, nil, nil, nil)
