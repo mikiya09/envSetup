@@ -205,16 +205,16 @@ M.apply = function()
 	highlight("TSMethod", colors.green, nil, nil, nil)
 	highlight("TSField", colors.orange, nil, nil, nil)
 	highlight("TSProperty", colors.fg, nil, nil, nil)
-	highlight("TSConstructor", colors.cyan, nil, nil, nil)       -- constructor --
+	highlight("TSConstructor", colors.green, nil, nil, nil)       -- constructor --
 
-	highlight("TSConditional", colors.pink, nil, nil, nil)          -- condition --
+	highlight("TSConditional", colors.purple, nil, nil, nil)          -- condition --
 	highlight("TSRepeat", colors.purple, nil, nil, nil)             -- repeat --
 	highlight("TSLabel", colors.cyan, nil, nil, nil)
 
 	highlight("TSKeyword", colors.pink, nil, nil, nil)            -- return/namespace --
 	highlight("TSKeywordFunction", colors.green, nil, nil, nil)
 	highlight("TSKeywordOperator", colors.cyan, nil, nil, nil)    -- delete[] --
-	highlight("TSOperator", colors.purple, nil, nil, nil)             -- operator --
+	highlight("TSOperator", colors.cyan, nil, nil, nil)             -- operator --
 	highlight("TSException", colors.purple, nil, nil, nil)
 	highlight("TSType", colors.cyan, nil, nil, nil)                 -- type --
 	highlight("TSTypeBuiltin", colors.cyan, nil, "italic", nil)
