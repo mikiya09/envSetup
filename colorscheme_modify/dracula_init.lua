@@ -190,7 +190,7 @@ M.apply = function()
 	highlight("TSString", colors.yellow, nil, nil, nil)             -- string --
 	highlight("TSStringEscape", colors.cyan, nil, nil, nil)
 	highlight("TSCharacter", colors.green, nil, nil, nil)
-	highlight("TSNumber", colors.fg, nil, nil, nil)            -- number --
+	highlight("TSNumber", colors.cyan, nil, nil, nil)            -- number --
 	highlight("TSBoolean", colors.green, nil, nil, nil)       -- Boolean --
 	highlight("TSFloat", colors.green, nil, nil, nil)
 	highlight("TSAnnotation", colors.yellow, nil, nil, nil)
@@ -208,13 +208,13 @@ M.apply = function()
 	highlight("TSConstructor", colors.green, nil, nil, nil)       -- constructor --
 
 	highlight("TSConditional", colors.purple, nil, nil, nil)          -- condition --
-	highlight("TSRepeat", colors.purple, nil, nil, nil)             -- repeat --
+	highlight("TSRepeat", colors.pink, nil, nil, nil)             -- repeat --
 	highlight("TSLabel", colors.cyan, nil, nil, nil)
 
-	highlight("TSKeyword", colors.pink, nil, nil, nil)            -- return/namespace --
+	highlight("TSKeyword", colors.purple, nil, nil, nil)            -- return/namespace --
 	highlight("TSKeywordFunction", colors.green, nil, nil, nil)
-	highlight("TSKeywordOperator", colors.cyan, nil, nil, nil)    -- delete[] --
-	highlight("TSOperator", colors.cyan, nil, nil, nil)             -- operator --
+	highlight("TSKeywordOperator", colors.purple, nil, nil, nil)    -- delete[] --
+	highlight("TSOperator", colors.fg, nil, nil, nil)             -- operator --
 	highlight("TSException", colors.purple, nil, nil, nil)
 	highlight("TSType", colors.cyan, nil, nil, nil)                 -- type --
 	highlight("TSTypeBuiltin", colors.cyan, nil, "italic", nil)
