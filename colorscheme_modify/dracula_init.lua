@@ -3,36 +3,29 @@
 local M = {}
 
 local DEFAULT_COLORS = {
-  bg = "#282A36",           -- original(bg)
-  -- bg = "#2e3440",        -- nord
-  -- fg = "#eceff4",        -- nord
+  bg = "#282A36",
   fg = "#ffffff",
   selection = "#44475A",
   comment = "#6272A4",
-  -- red = "#e06c75",       -- original(red)
-  red = "#bf616a",           -- nord
-  -- orange = "#ffb86c",    -- original(orange)
-  orange = "#d08770",       -- nord
-  -- yellow = "#F1FA8C",    -- original(yellow)
-  yellow = "#ebcb8b",       -- nord
+  red = "#FF5555",
+  orange = "#e5c07b",
+  yellow = "#F1FA8C",
   green = "#50fa7b",
-  purple = "#BD93F9",
-  -- cyan = "#61afef",      -- original(blue)
-  cyan = "#81a1c1",         -- nord
+  purple = "#bd93f9",
+  cyan = "#8be9fd",
   pink = "#FF79C6",
   bright_red = "#FF6E6E",
-  bright_green = "#a3be8c",
-  -- bright_green = "#50fa7b",
+  bright_green = "#69FF94",
   bright_yellow = "#FFFFA5",
-  bright_blue = "#8be9fd",
-  bright_magenta = "#c678dd",
-  bright_cyan = "#A4FFFF",
+  bright_blue = "#81a1c1",      -- nord
+  bright_magenta = "#FF92DF",
+  bright_cyan = "#8BE9FD",
   bright_white = "#FFFFFF",
   menu = "#21222C",
   visual = "#3E4452",
   gutter_fg = "#4B5263",
   nontext = "#3B4048",
-  white = "#ffffff",
+  white = "#ABB2BF",
   black = "#191A21",
 }
 
@@ -189,47 +182,47 @@ M.apply = function()
 	highlight("TSPunctBracket", colors.fg, nil, nil, nil)
 	highlight("TSPunctSpecial", colors.fg, nil, nil, nil)
 
-	highlight("TSConstant", colors.cyan, nil, nil, nil)        -- constant --
-	highlight("TSConstantBuiltin", colors.purple, nil, nil, nil)
+	highlight("TSConstant", colors.comment, nil, nil, nil)         -- constant --
+	highlight("TSConstantBuiltin", colors.pink, nil, nil, nil)
 
 	highlight("TSConstMacro", colors.cyan, nil, nil, nil)
 	highlight("TSStringRegex", colors.red, nil, nil, nil)
-	highlight("TSString", colors.green, nil, nil, nil)           -- string --
+	highlight("TSString", colors.yellow, nil, nil, nil)             -- string --
 	highlight("TSStringEscape", colors.cyan, nil, nil, nil)
 	highlight("TSCharacter", colors.green, nil, nil, nil)
-	highlight("TSNumber", colors.purple, nil, nil, nil)           -- number --
-	highlight("TSBoolean", colors.purple, nil, nil, nil)
+	highlight("TSNumber", colors.fg, nil, nil, nil)            -- number --
+	highlight("TSBoolean", colors.green, nil, nil, nil)       -- Boolean --
 	highlight("TSFloat", colors.green, nil, nil, nil)
 	highlight("TSAnnotation", colors.yellow, nil, nil, nil)
 	highlight("TSAttribute", colors.cyan, nil, nil, nil)
-	highlight("TSNamespace", colors.purple, nil, nil, nil)       -- namespace --
+	highlight("TSNamespace", colors.yellow, nil, nil, nil)         -- namespace --
 
 	highlight("TSFuncBuiltin", colors.cyan, nil, nil, nil)
-	highlight("TSFunction", colors.yellow, nil, nil, nil)         -- function --
+	highlight("TSFunction", colors.fg, nil, nil, nil)            -- function --
 	highlight("TSFuncMacro", colors.green, nil, nil, nil)
-	highlight("TSParameter", colors.white, nil, nil, nil)        -- parameter --
+	highlight("TSParameter", colors.fg, nil, nil, nil)            -- parameter --
 	highlight("TSParameterReference", colors.orange, nil, nil, nil)
 	highlight("TSMethod", colors.green, nil, nil, nil)
 	highlight("TSField", colors.orange, nil, nil, nil)
 	highlight("TSProperty", colors.fg, nil, nil, nil)
-	highlight("TSConstructor", colors.yellow, nil, nil, nil)      -- constructor: self-defined function --
+	highlight("TSConstructor", colors.cyan, nil, nil, nil)       -- constructor --
 
-	highlight("TSConditional", colors.pink, nil, nil, nil)        -- condition --
-	highlight("TSRepeat", colors.pink, nil, nil, nil)           -- repeat --
+	highlight("TSConditional", colors.pink, nil, nil, nil)          -- condition --
+	highlight("TSRepeat", colors.purple, nil, nil, nil)             -- repeat --
 	highlight("TSLabel", colors.cyan, nil, nil, nil)
 
-	highlight("TSKeyword", colors.bright_yellow, nil, nil, nil)          -- return/namespace --
-	highlight("TSKeywordFunction", colors.cyan, nil, nil, nil)
-	highlight("TSKeywordOperator", colors.pink, nil, nil, nil)
-	highlight("TSOperator", colors.purple, nil, nil, nil)           -- operator --
+	highlight("TSKeyword", colors.pink, nil, nil, nil)            -- return/namespace --
+	highlight("TSKeywordFunction", colors.green, nil, nil, nil)
+	highlight("TSKeywordOperator", colors.cyan, nil, nil, nil)    -- delete[] --
+	highlight("TSOperator", colors.purple, nil, nil, nil)             -- operator --
 	highlight("TSException", colors.purple, nil, nil, nil)
-	highlight("TSType", colors.purple, nil, nil, nil)                 -- type --
+	highlight("TSType", colors.cyan, nil, nil, nil)                 -- type --
 	highlight("TSTypeBuiltin", colors.cyan, nil, "italic", nil)
 	highlight("TSStructure", colors.purple, nil, nil, nil)
-	highlight("TSInclude", colors.bright_blue, nil, nil, nil)                -- include --
+	highlight("TSInclude", colors.purple, nil, nil, nil)                -- include --
 
 	highlight("TSVariable", colors.fg, nil, nil, nil)
-	highlight("TSVariableBuiltin", colors.purple, nil, nil, nil)
+	highlight("TSVariableBuiltin", colors.pink, nil, nil, nil)
 
   highlight("TSText", colors.orange, nil, nil, nil)
 	highlight("TSStrong", colors.orange, nil, "bold", nil)  -- bold
