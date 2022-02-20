@@ -56,7 +56,9 @@ return packer.startup(function(use)
   -- colorscheme
   use 'Mofiqul/dracula.nvim'
   use "wadackel/vim-dogrun"
-  use "shaunsingh/nord.nvim"
+  use "haishanh/night-owl.vim"
+  use "ellisonleao/gruvbox.nvim"
+
   -- gcc & gc comment
   use 'numToStr/Comment.nvim'             
 

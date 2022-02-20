@@ -32,7 +32,14 @@ require "user.telescope"
 vim.cmd [[
   set guicursor=n-c-v:hor20,i:ver10
   " colorscheme nord
+  " colorscheme night-owl
   ]]
+
+-- -- gruvbox
+-- vim.opt.termguicolors = true
+-- vim.o.background = "dark" -- or "light" for light mode
+-- vim.cmd([[colorscheme gruvbox]])
+
 
 -- vim.cmd[[colorscheme dracula]]
 -- references: https://github.com/LunarVim/Neovim-from-scratch
