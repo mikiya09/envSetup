@@ -1,6 +1,5 @@
 ---------------- *** neovim in lua *** -----------------
 
-
 -- 1. Global options (vim.o)
 -- 2. Local to window (vim.wo)
 -- 3. Local to buffer (vim.bo)
@@ -28,11 +27,14 @@ require "user.toggleterm"
 
 require "user.telescope"
 
+require "user.autosave"
+
 --++ transfering config from init.vim ++--
 vim.cmd [[
   set guicursor=n-c-v:hor20,i:ver10
-  " colorscheme nord
-  " colorscheme night-owl
+  let g:Hexokinase_highlighters = ["virtual"]
+  let g:Hexokinase_ftEnable = ['css', 'html', 'javascript']
+  let g:transparent_enabled = v:true
   ]]
 
 -- -- gruvbox

@@ -55,9 +55,9 @@ return packer.startup(function(use)
 
   -- colorscheme
   use 'Mofiqul/dracula.nvim'
-  use "wadackel/vim-dogrun"
-  use "haishanh/night-owl.vim"
   use "ellisonleao/gruvbox.nvim"
+  use "lunarvim/darkplus.nvim"
+  use "rebelot/kanagawa.nvim"
 
   -- gcc & gc comment
   use 'numToStr/Comment.nvim'             
@@ -68,14 +68,20 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
 
+  -- hexokinase: hex color highlighter
+  use {
+    "rrethy/vim-hexokinase",
+    run = "make hexokinase"
+  }
+
   -- ?
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- lualine
-  use {
-  'nvim-lualine/lualine.nvim',            -- lualine, the line under 
-  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+  -- use {
+  -- 'nvim-lualine/lualine.nvim',            -- lualine, the line under 
+  -- requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  -- }
 
   -- float window: toggleterm
   use "akinsho/toggleterm.nvim"
@@ -86,6 +92,11 @@ return packer.startup(function(use)
   -- telescope
   use "nvim-telescope/telescope.nvim"
 
+  -- transparent
+  use "xiyaowong/nvim-transparent"
+
+  -- autosave
+  use "Pocco81/AutoSave.nvim"
 
 
 

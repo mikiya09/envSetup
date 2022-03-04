@@ -17,13 +17,13 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 keymap("n", "<leader>e", ":Lex 30<cr>", opts) -- right now it's like nerdtree with <space>+f: files & folders
 
--- written on neovim :w 
-keymap("n", "<C-s>", ":w<CR>", opts)
-keymap("i", "<C-s>", "<Esc>:w<CR>a", opts)
+-- written on neovim :w (since autosave plugin is installed, once you get out of insert mode, it will automatically saves)
+-- keymap("n", "<C-s>", ":w<CR>", opts)
+-- keymap("i", "<C-s>", "<Esc>:w<CR>a", opts)
 
 -- Insert --
 -- out of insert mode
-keymap("i", ";;", "<ESC>", opts)    
+keymap("i", "<C-s>", "<ESC>", opts)    
 
 -- Visual --
 -- indentation in visual model: press > for right indent, < for left indent --
