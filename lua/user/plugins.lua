@@ -98,7 +98,8 @@ return packer.startup(function(use)
   -- autosave
   use "Pocco81/AutoSave.nvim"
 
-
+  -- LPS
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
 
   -- optional folder: loaded with command(lazyload), separate in another folder, keep it clean 
