@@ -3,7 +3,7 @@
 local M = {}
 
 local DEFAULT_COLORS = {
-  -- bg = "#282A36",
+  -- bg = "#191623",
   bg = "#222432",                      -- dogrun background
   fg = "#ffffff",
   selection = "#44475A",
@@ -19,7 +19,7 @@ local DEFAULT_COLORS = {
   bright_green = "#69FF94",
   bright_yellow = "#FFFFA5",
   bright_blue = "#81a1c1",      -- nord
-  bright_magenta = "#6f78be",
+  bright_magenta = "#5a4b81",
   bright_cyan = "#8BE9FD",
   bright_white = "#FFFFFF",
   menu = "#21222C",

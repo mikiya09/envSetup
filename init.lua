@@ -29,6 +29,8 @@ require "user.telescope"
 
 require "user.autosave"
 
+require "user.init-vim"
+
 require "user.lspconfig"
 
 
@@ -42,14 +44,6 @@ require "user.lspconfig"
 -- https://www.youtube.com/channel/UCS97tchJDq17Qms3cux8wcA
 --
 
---++ transfering config from init.vim ++--
-vim.cmd [[
-  set guicursor=n-c-v:hor20,i:ver10
-  let g:Hexokinase_highlighters = ["virtual"]
-  let g:Hexokinase_ftEnable = ['css', 'html', 'javascript']
-  " let g:transparent_enabled = v:true
-  " colorscheme omni
-  ]]
 
 -- -- gruvbox
 -- vim.opt.termguicolors = true
