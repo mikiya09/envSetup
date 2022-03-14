@@ -1,22 +1,18 @@
 
 
--- # kanagawa
--- vim.cmd("colorscheme kanagawa")
+-- one nord 
+-- =========================================
+-- local colors = require("onenord.colors").load()
 --
+-- require("onenord").setup({
+--   custom_highlights = {
+--     TSConstructor = { fg = colors.dark_blue },
+--   },
+--   custom_colors = {
+--     white = "#ffffff",
+--   },
+-- })
 
--- darkplua, default vscode like colorscheme 
--- vim.cmd[[colorscheme darkplus]]
-
-
--- rose pine colorscheme setup
--- use ({ 
---   'rose-pine/neovim', 
---   as = 'rose-pine', 
---   tag = 'v1.*', 
---   config = function() 
---        vim.cmd('colorscheme rose-pine')
---   end
---   })
 
 
 -- =====================================

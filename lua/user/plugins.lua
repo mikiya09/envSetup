@@ -56,8 +56,8 @@ return packer.startup(function(use)
   -- colorscheme
   use 'Mofiqul/dracula.nvim'
   use "ellisonleao/gruvbox.nvim"
-  use "lunarvim/darkplus.nvim"
-  use "rebelot/kanagawa.nvim"
+  use 'rmehri01/onenord.nvim'
+  use 'yonlu/omni.vim'
 
   -- gcc & gc comment
   use 'numToStr/Comment.nvim'             
@@ -100,6 +100,8 @@ return packer.startup(function(use)
 
   -- LPS
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use "neovim/nvim-lspconfig"           -- enable lsp
+  use "williamboman/nvim-lsp-installer"
 
 
   -- optional folder: loaded with command(lazyload), separate in another folder, keep it clean 

@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
-  ["darkplus.nvim"] = {
-    loaded = true,
-    path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
-    url = "https://github.com/lunarvim/darkplus.nvim"
-  },
   ["dracula.nvim"] = {
     loaded = true,
     path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/dracula.nvim",
@@ -94,11 +89,6 @@ _G.packer_plugins = {
     path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
-  ["kanagawa.nvim"] = {
-    loaded = true,
-    path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
-    url = "https://github.com/rebelot/kanagawa.nvim"
-  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -108,6 +98,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
+  },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-transparent"] = {
     loaded = true,
@@ -123,6 +123,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
     url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
+  },
+  ["omni.vim"] = {
+    loaded = true,
+    path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/omni.vim",
+    url = "https://github.com/yonlu/omni.vim"
+  },
+  ["onenord.nvim"] = {
+    loaded = true,
+    path = "/Users/jojo/.local/share/nvim/site/pack/packer/start/onenord.nvim",
+    url = "https://github.com/rmehri01/onenord.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,

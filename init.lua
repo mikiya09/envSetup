@@ -29,12 +29,26 @@ require "user.telescope"
 
 require "user.autosave"
 
+require "user.lspconfig"
+
+
+-- require "user.lsp"
+-- in order to let lsp take effect, also language server like pyright has to be installed first. Later spent sometime on that
+-- refers: 
+-- https://www.youtube.com/watch?v=36o52-2_83M&t=253s
+-- https://www.youtube.com/watch?v=FW2X1CXrU1w&t=1098s
+-- https://www.youtube.com/watch?v=0BkXocfUdUA
+-- https://www.youtube.com/watch?v=jFXEQV9Fo1k
+-- https://www.youtube.com/channel/UCS97tchJDq17Qms3cux8wcA
+--
+
 --++ transfering config from init.vim ++--
 vim.cmd [[
   set guicursor=n-c-v:hor20,i:ver10
   let g:Hexokinase_highlighters = ["virtual"]
   let g:Hexokinase_ftEnable = ['css', 'html', 'javascript']
-  let g:transparent_enabled = v:true
+  " let g:transparent_enabled = v:true
+  " colorscheme omni
   ]]
 
 -- -- gruvbox
