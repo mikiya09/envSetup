@@ -59,6 +59,9 @@ return packer.startup(function(use)
   use 'rmehri01/onenord.nvim'
   use 'yonlu/omni.vim'
 
+  -- nvimtree
+  use "kyazdani42/nvim-tree.lua"
+
   -- gcc & gc comment
   use 'numToStr/Comment.nvim'             
 

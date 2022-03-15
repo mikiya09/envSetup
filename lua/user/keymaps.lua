@@ -42,8 +42,11 @@ keymap("n", "<leader>l", "<cmd>lua require'telescope.builtin'.find_files(require
 keymap("n", "<c-g>", "<cmd>Telescope live_grep<cr>", opts)
 
 
+-- nvim tree toggle
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+
 -- Null-Ls mapping --
-keymap("n", "<leader>f", ":Format<cr>", opts)
+keymap("n", "<leader>f", ":lua vim.lsp.buf.formatting()<CR>", opts)
 
 
 -- ======================================================================================
