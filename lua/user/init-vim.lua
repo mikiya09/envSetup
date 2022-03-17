@@ -4,6 +4,6 @@ vim.cmd [[
   set guicursor=n-c-v:hor20,i:ver10
   let g:Hexokinase_highlighters = ["virtual"]
   let g:Hexokinase_ftEnable = ['css', 'html', 'javacript']
-  let g:transparent_enabled = v:true
+  " let g:transparent_enabled = v:true
   " colorscheme omni
 ]]

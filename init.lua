@@ -44,6 +44,9 @@ require("user.null-ls")
 -- shift + s: delete the whole line, and enter insert mode
 
 -- command --
+-- copy:  yy
+-- cut:   dd
+-- paste: p
 -- replace letter: r + shift + [the character you want to enter]
 -- replace number: r + [the number  you want to enter]
 -- insert at the begining: shift + i

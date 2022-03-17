@@ -373,7 +373,7 @@ function theme.highlights(colors, config)
       -- Identifiers referring to symbols or atoms.
       TSSymbol = { fg = colors.cyan },
       -- Tags like HTML tag names.
-      TSTag = { fg = colors.yellow },
+      TSTag = { fg = colors.red },
       -- HTML tag attributes.
       TSTagAttribute = { fg = colors.blue },
       -- Tag delimiters like `<` `>` `/`.
