@@ -308,7 +308,7 @@ function theme.highlights(colors, config)
       -- Keywords related to conditionals: `if`, `when`, `cond`, etc.
       TSConditional = { fg = colors.purple, style = config.styles.keywords },                           --------------- condition ----------------
       -- Constants identifiers. These might not be semantically constant. E.g. uppercase variables in Python.
-      TSConstant = { fg = colors.cyan },                                                                --------------- constant ----------------
+      TSConstant = { fg = colors.dark_gray },                                                                --------------- constant ----------------
       -- Built-in constant values: `nil` in Lua.
       TSConstBuiltin = { fg = colors.orange },
       -- Constants defined by macros: `NULL` in C.
@@ -337,7 +337,7 @@ function theme.highlights(colors, config)
       -- Keywords used to define a function: `function` in Lua, `def` and `lambda` in Python.
       TSKeywordFunction = { fg = colors.purple, style = config.styles.keywords },                          --------------- keyword function ---------------
       -- Unary and binary operators that are English words: `and`, `or` in Python; `sizeof` in C.
-      TSKeywordOperator = { fg = colors.dark_pink },                                                          --------------- keyword operator ---------------
+      TSKeywordOperator = { fg = colors.purple },                                                          --------------- keyword operator ---------------
       -- Keywords like `return` and `yield`.
       TSKeywordReturn = { fg = colors.purple },                                                            --------------- keyword return ---------------
       -- GOTO labels: `label:` in C, and `::label::` in Lua.
@@ -347,19 +347,19 @@ function theme.highlights(colors, config)
       -- Identifiers referring to modules and namespaces.
       TSNamespace = { fg = colors.yellow },                                                                --------------- namespace ---------------
       -- Numeric literals that don't fit into other categories.
-      TSNumber = { fg = colors.orange },                                                                   --------------- number ---------------
+      TSNumber = { fg = colors.red },                                                                   --------------- number ---------------
       -- Binary or unary operators: `+`, and also `->` and `*` in C.
       TSOperator = { fg = colors.white },                                                                  --------------- operator -------------
       -- Parameters of a function.
-      TSParameter = { fg = colors.red },                                                                   --------------- parameter --------------
+      TSParameter = { fg = colors.fg },                                                                   --------------- parameter --------------
       -- References to parameters of a function.
       TSParameterReference = { fg = colors.red },
       -- Same as `TSField`.
       TSProperty = { fg = colors.blue },
       -- Punctuation delimiters: Periods, commas, semicolons, etc.
-      TSPunctDelimiter = { fg = colors.dark_blue },
+      TSPunctDelimiter = { fg = colors.fg },                                                        -------------- delimiters --------------
       -- Brackets, braces, parentheses, etc.
-      TSPunctBracket = { fg = colors.dark_blue },
+      TSPunctBracket = { fg = colors.fg },                                                          --------------- bracket ---------------
       -- Special punctuation that doesn't fit into the previous categories.
       TSPunctSpecial = { fg = colors.dark_blue },
       -- Keywords related to loops: `for`, `while`, etc.
@@ -369,7 +369,7 @@ function theme.highlights(colors, config)
       -- Regular expression literals.
       TSStringRegex = { fg = colors.orange },
       -- Escape characters within a string: `\n`, `\t`, etc.
-      TSStringEscape = { fg = colors.orange },
+      TSStringEscape = { fg = colors.white },                                                                --------------- \n \t .etc ---------------
       -- Identifiers referring to symbols or atoms.
       TSSymbol = { fg = colors.cyan },
       -- Tags like HTML tag names.
