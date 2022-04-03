@@ -6,35 +6,35 @@
 -- 4. reload configuration (:so ~/.config/nvim/init.lua | :so %)
 
 --++ options config ++--
-require("user.options")
+require("xiron.options")
 
-require("user.keymaps")
+require("xiron.keymaps")
 
-require("user.plugins")
+require("xiron.plugins")
 
-require("user.colorscheme")
+require("xiron.colorscheme")
 
-require("user.comment")
+require("xiron.comment")
 
-require("user.treesitter")
+require("xiron.treesitter")
 
-require("user.lualine")
+require("xiron.lualine")
 
-require("user.autopairs")
+require("xiron.autopairs")
 
-require("user.toggleterm")
+require("xiron.toggleterm")
 
-require("user.telescope")
+require("xiron.telescope")
 
-require("user.autosave")
+require("xiron.autosave")
 
-require("user.nvim-tree")
+require("xiron.nvim-tree")
 
-require("user.init-vim")
+require("xiron.init-vim")
 
-require("user.lspconfig.language-servers")
+require("xiron.lspconfig.language-servers")
 
-require("user.null-ls")
+require("xiron.null-ls")
 
 --++ end ++--
 
