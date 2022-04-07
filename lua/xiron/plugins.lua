@@ -81,10 +81,10 @@ return packer.startup(function(use)
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- lualine
-  -- use {
-  -- 'nvim-lualine/lualine.nvim',            -- lualine, the line under 
-  -- requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  -- }
+  use {
+  'nvim-lualine/lualine.nvim',            -- lualine, the line under
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
   -- float window: toggleterm
   use "akinsho/toggleterm.nvim"

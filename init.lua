@@ -38,8 +38,6 @@ require("xiron.null-ls")
 
 --++ end ++--
 
-
-
 ----** neovim shortcut **----
 -- shift + s: delete the whole line, and enter insert mode
 

@@ -49,14 +49,20 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<leader>f", ":lua vim.lsp.buf.formatting()<CR>", opts)
 
 
+-- Neovim Split -- (replacement for tmux, when tmux break) --
+-- original <C-w> + <arrow key>
+-- swap left and right, up and down: <C-w> + <R>
+-- the following is the remap navigation to use shfit, and it's also valid command navigating between nerdtree and actually file
+keymap("n", "<S-h>", "<C-w>h", opts)
+keymap("n", "<S-j>", "<C-w>j", opts)
+keymap("n", "<S-k>", "<C-w>k", opts)
+keymap("n", "<S-l>", "<C-w>l", opts)
+-- https://www.youtube.com/watch?v=Zir28KFCSQw&t=251s
+--
+-- @@@@@@@@@@@@@@@@@@@@ remapping @@@@@@@@@@@@@@@@@@@@
+
+
 -- ======================================================================================
--- original <C-w-hjkl> still valid, I don't know why the following remapping doesn't work
--- keymap("n", "<C-h>", "<C-w>h", opts)
--- keymap("n", "<C-j>", "<C-w>j", opts)
--- keymap("n", "<C-k>", "<C-w>k", opts)
--- keymap("n", "<C-l>", "<C-w>l", opts)
-
-
 -- Visual --
 -- Move text up and down --
 -- keymap("v", "<S-j>", ":m .+1<CR>==", opts)
