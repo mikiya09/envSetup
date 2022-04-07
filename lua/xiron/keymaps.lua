@@ -50,6 +50,13 @@ keymap("n", "<leader>f", ":lua vim.lsp.buf.formatting()<CR>", opts)
 
 
 -- Neovim Split -- (replacement for tmux, when tmux break) --
+-- split for horizontal split, vsplit for vertical split
+-- when you need to specific which file to split to the new window, you type the name of that file
+-- if you have to navigate the file in other directory, you type the path to that file
+-- during navigating path, use tab for autocomplete, when selecting directory in autocomplete list, arrow key down means confirm; tab means next
+-- remember that arrow down could be represented with Ctrl + j
+
+-- Navigation --
 -- original <C-w> + <arrow key>
 -- swap left and right, up and down: <C-w> + <R>
 -- the following is the remap navigation to use shfit, and it's also valid command navigating between nerdtree and actually file
