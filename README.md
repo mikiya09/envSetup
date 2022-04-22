@@ -5,4 +5,4 @@
 
     >> from vimscript to lua
 
-    >> free your soul from unwanted plugins and other stuff inside an IDEs
+    >> free your soul from unwanted plugins and other stuff inside IDEs
