@@ -1,0 +1,119 @@
+
+colors:
+  # Default colors
+  primary:
+    # background: "#191623"
+    background: "#2E3440"
+    # background: "#222432"
+    foreground: "#f8f8f2"
+    # foreground: "#ffffff"
+
+  cursor:
+    text: "#C8D0E0"
+    cursor: "#C8D0E0"
+
+  # Normal colors
+  normal:
+    black: "#000000"
+    red: "#D57780"
+    green: "#A3BE8C"
+    yellow: "#ddb982"
+    blue: "#81A1C1"
+    # magenta: "#7b2cbf"
+    magenta: "#B988B0"
+    cyan: "#88C0D0"
+    white: "#ffffff"
+
+  # Light colors
+  bright:
+    black: "#5c6370"
+    red: "#D57780"
+    green: "#8FBCBB"
+    yellow: "#ddb982"
+    blue: "#5E81AC"
+    magenta: "#B48EAD"
+    cyan: "#56b6c2"
+    white: "#f8f8f2"
+
+
+working_directory: "/Users/jojo/wormhole/cs/fordham/c++/CSII/labs"
+
+
+cursor:
+  style:
+    shape: underline
+
+font:
+  normal:
+    family: "FiraCode Nerd Font"
+    style: "Light"
+  # bold:
+  #   family: "Hack Nerd Font"
+  #   style: "Bold"
+  # italic:
+  #   family: "Hack Nerd Font"
+  #   style: "Italic"
+  # bold_italic:
+  #   family: "Hack Nerd Font"
+  #   style: "Bold Italic"
+  #
+  # Point size
+  size: 13
+
+  offset:
+    x: 0      # line width  (left & right direction)
+    y: 0      # line height (up & down direction)
+  glyph_offset:
+    x: 0
+    y: 0
+
+window:
+  opacity: 1.0
+  dimensions:
+    columns: 243
+    lines: 87 # this is for 27' dell monitor
+  padding:
+    x: 9
+    y: 9
+  # decorations: none
+  # decorations: transparent
+  decorations: buttonless
+  #
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 10000
+
+  # Number of lines the viewport will move for every line scrolled when
+  # scrollback is enabled (history > 0).
+  multiplier: 10
+
+
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: true
+
+selection:
+  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
+
+
+live_config_reload: true
+#
+  
+key_bindings:
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+#   - { key: Key0, mods: Control, action: ResetFontSize }
+#   - { key: Equals, mods: Control, action: IncreaseFontSize }
+#   - { key: Add, mods: Control, action: IncreaseFontSize }
+#   - { key: Subtract, mods: Control, action: DecreaseFontSize }
+#   - { key: Minus, mods: Control, action: DecreaseFontSize }
+#   - { key: N, mods: Control, action: SpawnNewInstance }
+
+
+
+ # ===========================================================
+
+
+
+
+

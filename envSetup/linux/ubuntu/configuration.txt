@@ -1,0 +1,428 @@
+# don't make change to the following, here is just showing the process
+# usually, they enable it automatically
+# =================
+# check repository
+# sudo vim /etc/apt/sources.list
+# uncomment line start with "deb-src"
+< if broken, will show "xxxx" has no installation candidate >
+[ check -> https://www.youtube.com/watch?v=VdRKKkUre5I ]
+
+
+
+
+[ Ubuntu ]
+
+
+1. Terminal Level
+
+
+   * zsh shell & oh-my-zsh
+	>> sudo apt install zsh
+	>> sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	>> chsh -s /bin/zsh
+	[ plugin, search for installing ]
+
+
+   * Homebrew install
+	[ go to official website and copy the download link ]
+	>> echo '\n\n\n\n\n# ================ Personal Configuration ================\n' >> ~/.zshrc
+	>> echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
+	>> brew --version
+	>> brew install gcc (same result as using sudo apt install gcc)
+	>> brew install neovim (for latest version)
+
+   * check graphic card/nvidia
+	>> nvidia-smi
+	[ if failed ]
+	>> go to pop shop and update all software, including operating system updates
+	>> sudo add-apt-repository ppa:graphics-drivers/ppa --yes
+	>> sudo apt update
+	>> sudo apt install nvidia-driver-470 (according to current version)
+	[ restart ]
+
+   * install Alacritty
+	>> sudo apt-get install alacritty
+	[ if not set default, use following command ]
+	>> sudo update-alternatives --config x-terminal-emulator
+	[ move configuration file to nearby destination ]
+	>> cd /usr/share/doc/alacritty/example
+	>> mkdir ~/.config/alacritty (if doesn't exist)
+	>> cp alacritty.yml ~/.config/alacritty
+
+	[ configure ]
+	26 window: (FiraCode Nerd font)
+	      dimensions: 
+		columns: 170
+		lines: 55
+	105 font:
+	      size: 13.0
+
+	      normal:
+		family: FiraCode Nerd Font
+		style: regular
+
+	      bold: 
+		family: FiraCode Nerd Font
+		style: Bold
+
+	179 colors:
+	      primary:
+		background:
+		foreground:
+	      cursor: (200)
+		text:
+		cursor:
+	      normal: (270 normal color)
+		set all
+	      bright: (bright color)
+	
+	360 background opacity: 9.5
+	370 cursor:
+	      style: 
+		shape: Underline
+
+	436 mouse (you might want to have a look)
+
+	722 key_binding:
+		- {key: V,	mods: Control,	action: Paste	}
+		- {key: C,	mods: Control,	action: Copy	}
+
+
+   * change user's name and system name (operate at root level)
+	>> usermod -l newusername -d /home/newusername -m oldusername
+	>> groupmod -n newusername oldusername
+	>> ln -s /home/newusername /home/oldusername
+	>> chfn -f "YourFirstName YourLastName" newusername
+	[ check with the following command ]
+	>> cat /etc/passwd
+	>> cat /etc/group
+	[ references: https://www.youtube.com/watch?v=k2ZeUkHZSn0 ]
+
+
+   * change hostname (this is done manually, I believe you can assess to UI to make this change)
+	>> hostname
+	>> hostnamectl
+	>> sudo hostnamectl set-hostname newname
+	[reflect the change]
+	>> sudo vim /etc/hosts
+	======================
+	127.0.0.1 localhost 
+	127.0.1.1 old_hostname
+	|change to|
+	127.0.0.1 localhost
+	127.0.1.1 new_hostname
+	using first two command to check if changes reflect
+	[ reference: https://linuxconfig.org/how-to-change-hostname-on-linux ]
+
+
+   * upgrade & upgrade
+	[ restart ]
+	>> sudo apt update
+	>> sudo apt full-upgrade -y
+
+
+
+   * Powerlevel10k (p10k.txt sample is available)
+	- https://github.com/romkatv/powerlevel10k#oh-my-zsh
+	>> git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+	>> vim ~/.zshrc
+	>> change theme to "powerlevel10k/powerlevel10k"
+
+
+   * gnome-tweak-tool 
+	>> sudo apt-get install gnome-tweaks
+	[ remapping keys ]
+	>> gnome-tweak --> Keyboard & Mouse --> Additional Layout Options --> Ctrl position --> check the following two options
+	1. Caps Lock as Ctrl
+	2. Swap left alt with left ctrl
+	
+	[ if the desktop env or linux distro doesn't have tweak, try manually change it
+	======================================
+	! swap Caps_Lock with Control_L
+	! 
+	remove Lock = Caps_Lock
+	remove Control = Control_L
+	keysym Control_L = Caps_Lock
+	keysym Caps_Lock = Control_L
+	add Lock = Caps_Lock
+	add Control = Control_L
+	======================================
+	[ https://destinmoulton.com/blog/2020/remap-capslock-to-ctrl-with-xmodmap-automatically-on-startup/ ]
+
+   * remap key
+	: install xmodmap on Debian operating system 
+	>> sudo apt-get install x11-xserver-utils
+	: check current keymap
+	>> xmodmap
+	>> sudo apt install xcape
+	>> vim ~/.xmodmap (touch this new file)
+	: add the following
+	======================================
+	! vim-like arrow key mapping with ctrl
+	!
+	keycode 66 = Mode_switch
+	keysym h = h H Left
+	keysym j = j J Down
+	keysym k = k K Up
+	keysym l = l L Right
+	======================================
+	[ in oder to know the keycode for remapping ]
+	>> xev (66 is not necessarily ctrl)
+	: small window pop up, type keys on the keyboard, and you will see the code appear on terminal screen
+	[ once modify scripts, you would like to execute the file for it to take effect
+	>> xmodmap ~/.xmodmap
+	[ It seems like the if the same code in .Xmodmap get executed twice, it will override the previous setting ]
+	[ meaning if caps_lock map to ctrl first, and it will caps_lock(ctrl) will be mapped again to ctrl, which will running into error ]
+	[ I don't know why, so in that case you can reset the all setting and start from beginning ]
+	>> setxkbmap
+
+	? this method will lost effect after every reboot, and I have do this over again, so looking for a method that can permanently change it in the system
+	>> touch ~/xmodmap.sh
+	>> echo 'xmodmap ~/.xmodmap' >> ~/xmodmap.sh
+	>> chmod +x ~/xmodmap.sh
+	>> ./xmodmap.sh
+
+	references
+	[ http://clay-atlas.com/us/blog/2021/07/02/linux-en-map-up-down-left-right-xmodmap ]
+	[ https://command-not-found.com/xmodmap ]
+
+
+
+   * enable root login
+	>> sudo apt update
+	>> sudo passwd
+	[ enter password twice ]
+
+
+
+   * Terminal Configuration (Tmux replacement)
+
+	>> vim ~/.tmux.conf
+	>> [ copy this to it ]
+	# Send prefix
+	set-option -g prefix C-a
+	unbind-key C-a
+	bind-key C-a send-prefix
+ 
+	# Use ctrl-arrow keys to switch panes
+	bind -n C-Left select-pane -L
+	bind -n C-Right select-pane -R
+	bind -n C-Up select-pane -U
+	bind -n C-Down select-pane -D
+ 
+	# alt arrow to switch windows
+	bind -n M-Left previous-window
+	bind -n M-Right next-window
+ 
+	# Mouse mode
+	setw -g mouse on
+ 
+	# Set easier window split keys
+	bind-key v split-window -h
+	bind-key h split-window -v
+ 
+	# Easy config reload
+	bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded."
+
+	# reference: https://pastebin.com/CDEVZTSC
+
+
+	[ shortcut:  for references ]
+	I. Preference --> Keybindings 
+		= copy:		ctrl+c
+		= new_tab:	ctrl+t
+		= paste:		ctrl+v
+		= preferences:	shift+ctrl+enter
+		= split_horiz:	ctrl+alt+h
+		= split_vert:	ctrl+alt+v
+		= zoom_in:	ctrl+=
+		= zoom_out:	ctrl+-
+		= go_down:	ctrl+j
+		= go_left:	ctrl+h
+		= go_right:	ctrl+l
+		= go_up:		ctrl+k
+		= resize_down:	alt+Down
+		= resize_left:	alt+Left
+		= resize_right:	alt+Right
+		= resize_up:	alt+Up
+
+	[ general ]
+
+	[ color ]
+	classic ubuntu terminal color: #300a24
+
+	[ working directory ]
+	preference --> layouts --> default --> window0 --> terminal child1 --> working directory: /home/username/..
+
+   * Neovim Configuration
+    	>> echo '\n# neovim' >> ~/.zshrc
+    	>> echo 'alias vim="nvim"' >> ~/.zshrc
+    	>> echo 'export EDITOR="nvim"\n' >> ~/.zshrc
+	>> cd
+ 	>> mkdir ~/.config/nvim
+	>> cd ~/.config/nvim
+
+	-- turn off VPN if you have that -- (for checking: C & c)
+	>> sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.config}"/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+	[ copy init.vim to ~/.config/nvim ]
+    	[ follow instruction on init.vim install go ]
+    	- https://go.dev/dl/
+    	- choose latest version
+    	>> go version
+    	>> which go
+    	[ uncomment " Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' } ]
+    	>> :so %
+    	-- if something went go wrong later, check vim-plug file or the download location --
+    	-- copy and paste the content into init.vim --
+    	: PlugInstall
+    	-- some plug need dependency to be installed priorly --
+    	-- if that's the case, delete those package and download dependencies first and re-download them --
+
+
+
+
+2. OS level
+
+   [ shortcut ]
+
+ 	Setting --> keyboard --> customize shortcut: 
+   	[ Launchers ]
+   	* Shift+Ctrl+H: open home folder
+  	* Shift+Ctrl+T: open terminal
+   	* Shift+Ctrl+B: open browser
+   	* Shift+Ctrl+P: open setting
+	* super: search
+
+   	[ Navigation ]
+   	* Ctrl+Tab: Switch application
+	* ctrl+`:   switch windows
+
+   	[ System ]
+   	* Super+L: Lock Screen
+   	* Super+A: show all application
+
+   	[ Typing ]
+   	* Switch to next input source
+
+   	[ Windows ]
+   	* Restore window
+
+	[ screenshots ]
+	* shift+ctrl+#(3): copy a screenshot of a window to Pictures
+	* shift+ctrl+$(4): copy a screenshot of an area to Pictures
+
+
+   [ Displays ]
+	
+	Setting -> Displays --> Fractional Scaling: 175% (DELL XPS 15) --> Night shift
+
+   [ Mouse&Touchpad ]
+	
+	suit yourself
+
+
+
+
+
+
+
+
+
+   * 
+
+
+
+
+
+# 8
+# =================
+# conda installation
+# [ download from the official website "https://docs.anaconda.com/anaconda/install/hashes/lin-3-64/" ]
+# choose the name ending with "..Linux-aarch64.sh"
+# >> bash ~/Downloads/Anaconda3-2021.05-Linux-aarch64.sh
+# [ bash must be included no matter which shell you are using, go the folder that contain the .sh file, and run ]
+# if something went wrong --> "https://docs.anaconda.com/anaconda/install/linux/"
+
+
+# 9
+# ================
+# miniforge env
+# --> if you are run some modules that need the permission of root, such as scapy/netfilterqueue
+# --> you have to use the miniforge python environment to run
+# --> [-] ImportError: No module named scapy.all
+# 
+# method 1:
+# link the miniforge env python path to bin dircetory
+# >> sudo mv /usr/bin/python{,.bk}  #备份原来的python
+# >> sudo ln -s ${HOME}/miniforge-pypy3/bin/python /usr/bin/python  #使用conda下的python
+# >> sudo python xxx.py
+# 
+# method 2:
+# >> sudo ${HOME}/miniforge-pypy3/bin/python xxx.py
+# reference: "https://blog.csdn.net/u012939880/article/details/102802497"
+# 
+# ex. in python3.7, netfilterqueue is named as NFQP3 while using pip install
+# >> sudo apt-get install build-essential python-dev libnetfilter-queue-dev
+# >> pip install NFQP3
+
+
+
+
+
+
+# 12 (special)
+# =================
+# NetfilterQueue 
+# >> apt-get install build-essential python-dev libnetfilter-queue-dev
+# >> pip install NetfilterQueue
+< if fail, then >
+# >> pip install NetfilterQueue -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+# more info about ssl --> https://www.codenong.com/js8e476eef43f7/
+
+# if fail again
+# refer to ~/stuff/cool_stuff/setup/dev/python_package/installation.txt
+# "https://github.com/kti/python-netfilterqueue"
+
+
+
+
+
+# 3.3 change the resolution permanently
+# ===================
+# reference: https://www.securitypluspro.com/blog/security-training-online-lab-customizing-kali-linux-part-4-of-7
+# https://medium.com/@AbhiXpert/add-change-the-custom-resolution-of-your-display-using-xrandr-on-ubuntu-18-04-in-a-minute-338caec6e29
+
+
+
+
+# 3 (?)
+# =================
+# torbrowser 
+# >> sudo apt install tor torbrowser-launcher
+# >> torbrowser-launcher
+[first time open torbrowser click "connect"]
+[check if connection successful: https://check.torproject.org]
+
+
+
+
+# 5 (only needed when install the operating system through 镜像文件)
+# =================
+# parallels tool
+# >> uname -r
+# >> sudo apt install linux-headers-$(uname -r) build-essential dkms libelf-dev
+< if not working, repeat step 5 >
+< then, reboot the server/restart >
+< login using username, not root >
+[open parallel tool on the desktop]
+[go to the dir m/media/cdrom0 in terminal]
+# check --> dir: /media/cdrom0
+# >> su
+[password]
+# >> ./install
+< if fail, then >
+< umount the parallel tool file manually, "umount/eject anyway" >
+# >> mount /dev/sr0 /media/cdrom
+# >> cd /media/cdrom
+# >> ./install
+
