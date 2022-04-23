@@ -33,7 +33,6 @@
     os_icon                 # os identifier
     command_execution_time  # duration of the last command
     vcs
-    anaconda
     dir
     # battery
     # vcs
@@ -105,6 +104,7 @@
     # time                  # current time
     # dir
     battery
+    anaconda
     # ip                    # ip address and bandwidth usage for a specified network interface
     # public_ip             # public IP address
     # proxy                 # system-wide http/https/ftp proxy
@@ -896,8 +896,9 @@
   #####################[ anaconda: conda environment (https://conda.io/) ]######################
   # Anaconda environment color.
   # #f5502d
-  typeset -g POWERLEVEL9K_ANACONDA_FOREGROUND=#8be9fd
+  typeset -g POWERLEVEL9K_ANACONDA_FOREGROUND=red ##8be9fd
   typeset -g POWERLEVEL9K_ANACONDA_VISUAL_IDENTIFIER_EXPANSION=''
+  # 
   # Anaconda segment format. The following parameters are available within the expansion.
   #
   # - CONDA_PREFIX                 Absolute path to the active Anaconda/Miniconda environment.
