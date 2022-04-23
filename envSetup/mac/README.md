@@ -1,34 +1,55 @@
 
 
 # General Setting
-    1) Display setting, choose scale --> more space --> night shift
-    2) enable three finger drag: accessibility --> pointer control --> trackpad options --> enable dragging --> three finger drag --> increase speed with one block
+    1) Display setting, choose scale
+        => more space 
+        => night shift
+    2) enable three finger drag: 
+        => accessibility 
+        => pointer control 
+        => trackpad options 
+        => enable dragging 
+        => three finger drag 
+        => increase speed with one block
     3) remove all the unnecessary app from the dock (left with: finder, safari, system preference)
-    4) system preference --> Dock&Menu Bar --> hide dock, set it automatically show, hide top bar --> Position on Left--> scroll down to Spotlight --> uncheck show in Menu Bar
-    5) add accessability to the top bar: accessibility --> show in Control Center --> play with shortcut
-    6) "Replace by cursor pro" Accessibility --> Zoom Option --> since point Pro is introduced, uncheck hover text
+    4) system preference 
+        => Dock&Menu Bar 
+        => hide dock, set it automatically show, hide top bar 
+        => Position on Left
+        => scroll down to Spotlight 
+        => uncheck show in Menu Bar
+    5) add accessability to the top bar: accessibility 
+        => show in Control Center 
+        => play with shortcut
+    6) Replace by cursor pro" Accessibility 
+        => Zoom Option 
+        => since point Pro is introduced, uncheck hover text
 	      [!] hover
           + Text 32pt
           + Text font (choose whatever you want)
           + Activation modifier Option/Alt
           + play with color
     7) arrange app in the launchpad 
-    8) go to preference --> general --> set your favorite highlight color and accent color (usually purple) --> set appearance to auto
+
+    8) go to preference 
+        => general 
+        => set your favorite highlight color and accent color (usually purple) 
+        => set appearance to auto
     9) Safari
-	      [!] enable cookie: preference --> privacy --> uncheck website tracking
-	      [!] preference --> Tabs --> Compact
+	      [!] enable cookie: preference 
+            => privacy 
+            => uncheck website tracking
+	      [!] preference 
+            => Tabs 
+            => Compact
 
     10) Mac --> system preference --> keyboard
         [!] modifier key (if you have connect to outer keyboard)
             + switch the cmd and alt(option) key for [G815-RGB keyboard] (do not modify the apple built-in one)
-
         [!] input source
             + pinyin
             - do not check "Use the CAPSLOCK key to switch to and from U.S.
-
         [!] keyboard: fn (no Nothing)
-
-
         [!] shortcuts
 
           @ Mission Control [uncheck all this]
@@ -38,11 +59,9 @@
 	            - show desktop:		            cmd+right
 	            - move left a space:	        ctrl+left
 	            - move right a space:	        ctrl+right 
-
           @ launchpad  
 	            - Turn Dock Hiding On/Off option+cmd+D
 	            - Show Launchpad ctrl+down
-
           @ app shortcut 
 	            >> "+"
 	            >> select app
@@ -61,10 +80,8 @@
 		              - Open File... --> shfit+cmd+o
 		              - Minimize --> ctrl+cmd+option+M (so you don't mistakenly push that button while typing)
 		              - restore the minimized windows: cmd+tab --> select the windows --> hold cmd and press alt(option) at the same time --> hold option and release cmd 
-
           @ spotlight
             - uncheck both
-
           @ default
             - show favorites bar
             - hide one application:	cmd+h
@@ -90,18 +107,18 @@
 
     3) Install Terminal Emulator
 	    >> brew install alacritty
-      [!] optional
+      [optional]
         >> brew install iterm2 --cask
         >> curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
-    4) 
+    4) optional
       >> open /
 	      + drag disk and user to the side bar of file manager (hover over to the disk name)
 	      + remove document from side bar
 
     5) Alacritty Configuration
       >> refer to alacritty.yml 
-    
+
     6) Nerd Font
       >> Download Nerd Font
 	    >> https://github.com/ryanoasis/nerd-fonts
@@ -120,7 +137,6 @@
       [!] Export Homebrew path to .zshrc
       >> echo '\n\n\n\n\n# ================ Personal Configuration ================\n' >> ~/.zshrc
       >> echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zshrc
-
 
     9) Powerlevel10k (p10k.txt sample is available)
 	    [!] https://github.com/romkatv/powerlevel10k#oh-my-zsh
@@ -296,10 +312,11 @@
       [OK] notability
       [OK] movist
       [OK] cursor Pro
+      [OK] xcode (app store)
+      [OK] The Unarchiver (app store)
       [?] parallels
       [?] istats (cost $9/mo, it's your choice, search from website)
       [?] blender
-      [?] The Unarchiver (app store)
       [?] weka
 
 
