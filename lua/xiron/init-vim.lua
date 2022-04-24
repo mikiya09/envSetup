@@ -5,5 +5,4 @@ vim.cmd [[
   let g:Hexokinase_highlighters = ["virtual"]
   let g:Hexokinase_ftEnable = ['css', 'html', 'javacript']
   " let g:transparent_enabled = v:true
-  " colorscheme omni
 ]]

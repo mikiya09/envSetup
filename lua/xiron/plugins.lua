@@ -106,6 +106,9 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig"           -- enable lsp
   use "williamboman/nvim-lsp-installer"
 
+  -- solidity
+  use "tomlion/vim-solidity"
+  
 
   -- optional folder: loaded with command(lazyload), separate in another folder, keep it clean 
   -- format {'user/repo', opt = true, cmd = {'xxx', 'xxx', 'xxx'}}
