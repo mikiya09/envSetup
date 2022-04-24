@@ -106,7 +106,7 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig"           -- enable lsp
   use "williamboman/nvim-lsp-installer"
 
-  -- solidity
+  -- solidity: syntax highlighting
   use "tomlion/vim-solidity"
   
 

@@ -335,7 +335,7 @@ function theme.highlights(colors, config)
       -- Keywords that don't fit into other categories.
       TSKeyword = { fg = colors.purple, style = config.styles.keywords },                                  --------------- keyword --------------
       -- Keywords used to define a function: `function` in Lua, `def` and `lambda` in Python.
-      TSKeywordFunction = { fg = colors.purple, style = config.styles.keywords },                          --------------- keyword function ---------------
+      TSKeywordFunction = { fg = colors.cyan, style = config.styles.keywords },                          --------------- keyword function (solidity)---------------
       -- Unary and binary operators that are English words: `and`, `or` in Python; `sizeof` in C.
       TSKeywordOperator = { fg = colors.purple },                                                          --------------- keyword operator ---------------
       -- Keywords like `return` and `yield`.
@@ -397,7 +397,7 @@ function theme.highlights(colors, config)
       -- Footnotes, text references, citations, etc.
       TSTextReference = { fg = colors.purple },
       -- Text environments of markup languages.
-      TSEnvironment = { fg = colors.fg },
+      TSEnvironment = { fg = colors.green },
       -- Text/string indicating the type of text environment. Like the name of a `\begin` block in LaTeX.
       TSEnvironmentName = { fg = colors.fg },
       -- Text representation of an informational note.
