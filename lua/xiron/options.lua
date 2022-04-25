@@ -1,5 +1,5 @@
 -- :help options
-
+    
 
 local options = {
   showmode = false,
@@ -7,8 +7,8 @@ local options = {
   smartcase = true,
   smartindent = true,
   expandtab = true,
-  shiftwidth = 2,
-  tabstop = 2,
+  shiftwidth = 4,
+  tabstop = 4,
   guifont = "",
   mouse = "a",
   number = true,
