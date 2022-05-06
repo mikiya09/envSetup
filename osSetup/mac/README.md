@@ -52,13 +52,13 @@
         [!] keyboard: fn (no Nothing)
         [!] shortcuts
 
-          @ Mission Control [uncheck all this]
-	            - Mission Control:            ctrl+up 
-	            - show notification center:   cmd+left
-	            - Application windows:        cmd+down 
-	            - show desktop:		            cmd+right
-	            - move left a space:	        ctrl+left
-	            - move right a space:	        ctrl+right 
+          @ Mission Control < for no touchpad >
+	            - Mission Control:              ctrl+up 
+	            - show notification center:     ctrl+left
+	            - Application windows:          cmd+down 
+	            - show desktop:		            ctrl+right
+	            - move left a space:	        cmd+left
+	            - move right a space:	        cmd+right 
           @ launchpad  
 	            - Turn Dock Hiding On/Off option+cmd+D
 	            - Show Launchpad ctrl+down
@@ -71,8 +71,8 @@
 	              [Safari]
 		              - Show Favorites Bar --> ctrl+f
 		              - Hide Favorites Bar --> ctrl+f
-                [Chrome]
-                  - Always Show Bookmarks Bar --> ctrl+f
+                  [Chrome]
+                      - Always Show Bookmarks Bar --> ctrl+f
 	              [global]
 		              - Preferences... --> shift+ctrl+enter
 		              - Tile Window to Left of Screen --> ctrl+`
@@ -83,7 +83,6 @@
           @ spotlight
             - uncheck both
           @ default
-            - show favorites bar
             - hide one application:	cmd+h
             - show Dock:		cmd+alt+d
             - force quit:		cmd+alt+q
